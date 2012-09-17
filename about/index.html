@@ -9,7 +9,7 @@
   <meta name="author" content="Taiki Tada">
 
   
-  <meta name="description" content="About Sep 17th, 2012 グリッド，クラウドなどの大規模計算+高速ネットワークな研究室に所属する大学院生． 一人前なエンジニアになることが当面の目標． Sep 17th, 2012 Tweet Recent Posts Hello My blog Latest Tweets &hellip;">
+  <meta name="description" content="About Sep 17th, 2012 グリッド，クラウドなどの大規模計算+高速ネットワークな研究室に所属する大学院生． 一人前なエンジニアになることが当面の目標． Sep 17th, 2012 Tweet Recent Posts Hello My blog GitHub Repos &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -141,6 +141,35 @@
       </li>
     
   </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/TaikiTada">@TaikiTada</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'TaikiTada',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
 </section>
 
 
